@@ -1,0 +1,31 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$whiteness;
+    font-size: 4rem;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: variables.$purple;
+        transition: 0.5s;
+        transform: rotateY(0deg);
+        backface-visibility: hidden;
+    }
+}
+
+.boxOpen{
+    transform: rotateY(0deg);
+    &:after{
+        transform: rotateY(180deg);
+    }
+}

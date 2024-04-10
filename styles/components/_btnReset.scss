@@ -1,0 +1,22 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.btn-reset{
+    padding: 1rem 1rem;
+    @include mixins.centralize(100);
+    @include mixins.ff-fs-cl(
+        variables.$font-retro,
+        1.5rem,
+        variables.$purple
+    );
+    background-color: variables.$whiteness;
+    cursor: pointer;
+    border: none;
+    margin: 1rem 0 ;
+    border-radius: 1rem;
+    &:focus{
+        color: #ec38bc;
+        background-color: #262809;
+        border-radius: 1em;
+    }
+}

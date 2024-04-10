@@ -1,0 +1,13 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.game-box{
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}

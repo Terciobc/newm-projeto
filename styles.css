@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(153, 98, 138);
+}
+
+.title {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 2rem;
+  color: #0C0421;
+}
+
+.container {
+  background: linear-gradient(325deg, #03001e 0%, #7303c0 30%, #ec38bc 70%, #fdeff9 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 4rem 0 0 0;
+}
+
+.game-box {
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+.btn-reset {
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  width: 100;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1.5rem;
+  color: #0C0421;
+  background-color: #CAD4FA;
+  cursor: pointer;
+  border: none;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+.btn-reset:focus {
+  color: #ec38bc;
+  background-color: #262809;
+  border-radius: 1em;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CAD4FA;
+  font-size: 4rem;
+  transform: rotateY(180deg);
+  transition: 0.5s;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0C0421;
+  transition: 0.5s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.boxOpen {
+  transform: rotateY(0deg);
+}
+.boxOpen:after {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=styles.css.map */
