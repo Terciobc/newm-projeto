@@ -59,7 +59,7 @@ body {
   border-radius: 1em;
 }
 
-.item {
+.item, .foto {
   position: relative;
   width: 100px;
   height: 100px;
@@ -71,7 +71,7 @@ body {
   transform: rotateY(180deg);
   transition: 0.5s;
 }
-.item::after {
+.item::after, .foto::after {
   content: "";
   position: absolute;
   inset: 0;

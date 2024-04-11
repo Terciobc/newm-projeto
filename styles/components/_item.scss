@@ -1,7 +1,7 @@
 @use "../utilities/variables";
 @use "../utilities/mixins";
 
-.item {
+.item{
     position: relative;
     width: 100px;
     height: 100px;
@@ -23,6 +23,9 @@
         transform: rotateY(0deg);
         backface-visibility: hidden;
     }
+}
+.foto{
+    @extend .item
 }
 
 .boxOpen {

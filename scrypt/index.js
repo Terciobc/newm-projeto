@@ -30,10 +30,19 @@ function shuffle(array) {
 let shuffleEmojis = shuffle(emojis);
 
 shuffleEmojis.forEach((emoji) => {
-  let card = document.createElement("img");
+  let card = document.createElement("div");
+  let foto = document.createElement("img");
+
+  foto.className = "foto";
+  card.appendChild(foto);
+  foto.src = emoji.src;
+
   card.className = "item";
   card.src = emoji.src;
+
+  // Ao clicar chama a função handleClick();
   card.onclick = handleClick;
+
   document.querySelector(".game-box").appendChild(card);
 });
 
