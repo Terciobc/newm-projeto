@@ -1,20 +1,20 @@
 const emojis = [
-  "😂",
-  "😂",
-  "😱",
-  "😱",
-  "😈",
-  "😈",
-  "🤡",
-  "🤡",
-  "😏",
-  "😏",
-  "🙄",
-  "🙄",
-  "😭",
-  "😭",
-  "🙏",
-  "🙏",
+  { src: "../assets/img/breno.png" },
+  { src: "../assets/img/breno.png" },
+  { src: "../assets/img/chris.png" },
+  { src: "../assets/img/chris.png" },
+  { src: "../assets/img/gabriel.png" },
+  { src: "../assets/img/gabriel.png" },
+  { src: "../assets/img/ironMaiden.png" },
+  { src: "../assets/img/ironMaiden.png" },
+  { src: "../assets/img/john.png" },
+  { src: "../assets/img/john.png" },
+  { src: "../assets/img/livia.png" },
+  { src: "../assets/img/livia.png" },
+  { src: "../assets/img/nathan.png" },
+  { src: "../assets/img/nathan.png" },
+  { src: "../assets/img/tercio.png" },
+  { src: "../assets/img/tercio.png" },
 ];
 let openCards = [];
 
@@ -30,9 +30,9 @@ function shuffle(array) {
 let shuffleEmojis = shuffle(emojis);
 
 shuffleEmojis.forEach((emoji) => {
-  let card = document.createElement("div");
+  let card = document.createElement("img");
   card.className = "item";
-  card.innerHTML = emoji;
+  card.src = emoji.src;
   card.onclick = handleClick;
   document.querySelector(".game-box").appendChild(card);
 });

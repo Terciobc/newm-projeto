@@ -75,7 +75,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: #0C0421;
+  background-image: url("../assets/img/yugi.webp");
+  background-size: cover;
+  background-position: center;
   transition: 0.5s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
